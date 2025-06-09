@@ -1,17 +1,5 @@
 
-import gdown
-import os
 
-# Create a folder to store downloaded models (optional)
-os.makedirs("models", exist_ok=True)
-
-# Download tfidf.pkl
-tfidf_url = "https://drive.google.com/uc?id=17sMsjSnbqS5nc-j5TIPPRRtb1y-zwor_"
-gdown.download(tfidf_url, "models/tfidf.pkl", quiet=False)
-
-# Download clf.pkl
-clf_url = "https://drive.google.com/uc?id=1Wg0OfWhk04yyaiEYk6ekb5YqPX_sReMp"
-gdown.download(clf_url, "models/clf.pkl", quiet=False)
 
 
 import streamlit as st
