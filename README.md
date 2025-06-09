@@ -1,47 +1,88 @@
-# Resume Category Prediction App
+# 📄 Resume Category Prediction App
+
 AI-powered web app that predicts the job category of a given resume (PDF, DOCX, or TXT format) using a trained machine learning model.
 
-✅ Built with Streamlit
-✅ ML models hosted on HuggingFace Hub
-✅ Dynamic model loading → no need to store large model files in GitHub
-✅ Deployed on Streamlit Cloud
+Built with Streamlit, the app dynamically downloads ML models from Hugging Face Hub, so you don't have to store large files in the repo.
 
-### 🚀 Demo
-# 👉 Live App: https://airesumescrenning.streamlit.app/
-### 📌 Features
-Upload resumes in PDF, DOCX, or TXT formats
+---
 
-Automatic text extraction and cleaning
+## 🚀 Demo
 
-Predicts the job category of the resume using an ML classifier
+Live App: [https://airesumescrenning.streamlit.app/](https://airesumescrenning.streamlit.app/)
 
-Displays extracted text and predicted category
+---
 
-Lightweight app — models are downloaded dynamically from HuggingFace Hub
+## 📌 Features
 
-### ⚙️ How It Works
-User uploads a resume file.
+- Upload resumes in PDF, DOCX, or TXT formats  
+- Automatic text extraction and cleaning  
+- Predicts the job category of the resume using a machine learning classifier  
+- Displays extracted text and predicted job category  
+- Lightweight app — downloads models dynamically at runtime
 
-App extracts and cleans the text.
+---
 
-Pre-trained ML model classifies the resume into a job category.
+## 🏗️ Installation
 
-The result is displayed on screen.
+1. Clone the repository:  
+    ```bash
+    git clone https://github.com/AritriPodde2210/resume-category-prediction.git
+    ```
+2. Change directory to the project folder:  
+    ```bash
+    cd resume-category-prediction
+    ```
+3. Create and activate a Python virtual environment (optional but recommended):  
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate   # On Windows: venv\Scripts\activate
+    ```
+4. Install dependencies:  
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. Run the Streamlit app:  
+    ```bash
+    streamlit run app.py
+    ```
 
-### Project Structure
+---
 
-📁 models/              # models downloaded dynamically at runtime
-📄 app.py                # main Streamlit app
-📄 requirements.txt      # Python dependencies
-📄 README.md             # this file
+## 📁 Project Structure
 
-### 🚀 To-Do (Future Enhancements)
- Show Top-3 probable categories with confidence scores
+- 📁 models/ # Models downloaded dynamically at runtime
+- 📄 app.py # Main Streamlit app
+- 📄 requirements.txt # Python dependencies
+- 📄 README.md # This file
 
- Add progress bar while processing resume
 
- Improve app UI/UX with custom CSS
+---
 
- Add more supported file formats (.doc)
+## 🔧 Usage
 
- Deploy as a REST API (FastAPI + Streamlit frontend)
+- Open the app in your browser after running `streamlit run app.py`
+- Upload your resume file (PDF, DOCX, or TXT)
+- Wait for text extraction and prediction results
+- View predicted job category and extracted text if needed
+
+---
+
+## ⚙️ How It Works
+
+- Downloads pre-trained ML models from Hugging Face Hub dynamically
+- Extracts raw text from uploaded resumes using PyPDF2, python-docx, or plain text decoding
+- Cleans and preprocesses the extracted text
+- Transforms text with TF-IDF vectorizer
+- Predicts category with a pre-trained classification model
+- Decodes predicted labels using label encoder
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+If you want me to add any other section (like Contributing, Contact, or more detailed Usage), just say!  
+And congrats again on deploying your app! 🎉
