@@ -84,5 +84,4 @@ This project is licensed under the MIT License.
 
 ---
 
-If you want me to add any other section (like Contributing, Contact, or more detailed Usage), just say!  
-And congrats again on deploying your app! 🎉
+
